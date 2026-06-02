@@ -9,10 +9,10 @@
           Si eres creador o marca, este es el sitio para empezar.
         </p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-          <a href="#creadores" class="inline-flex justify-center rounded-full bg-bg px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-text transition duration-300 hover:-translate-y-0.5 hover:bg-soft">
+          <a href="#creadores" class="inline-flex cursor-pointer justify-center rounded-full bg-bg px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-text transition duration-300 hover:-translate-y-0.5 hover:bg-soft">
             Soy creador
           </a>
-          <a href="#marcas" class="inline-flex justify-center rounded-full border border-bg/35 px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-bg transition duration-300 hover:-translate-y-0.5 hover:bg-bg hover:text-text">
+          <a href="#marcas" class="inline-flex cursor-pointer justify-center rounded-full border border-bg/35 px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-bg transition duration-300 hover:-translate-y-0.5 hover:bg-bg hover:text-text">
             Soy una marca
           </a>
         </div>
@@ -24,10 +24,10 @@
           <p class="mt-3 max-w-sm text-muted">Donde marcas y creadores conectan.</p>
         </div>
         <nav class="flex flex-wrap gap-x-8 gap-y-4 text-sm font-medium md:justify-end" aria-label="Navegación de footer">
-          <a href="#creadores" class="hover:underline">Creadores</a>
-          <a href="#marcas" class="hover:underline">Marcas</a>
-          <a href="https://instagram.com/lagamberra" rel="noreferrer" target="_blank" class="hover:underline">Instagram</a>
-          <a href="mailto:hola@lagamberra.xyz" class="hover:underline">Contacto</a>
+          <a href="#creadores" class="cursor-pointer rounded-sm hover:underline">Creadores</a>
+          <a href="#marcas" class="cursor-pointer rounded-sm hover:underline">Marcas</a>
+          <a href="https://instagram.com/lagamberracreators" rel="noreferrer" target="_blank" class="cursor-pointer rounded-sm hover:underline">Instagram</a>
+          <a href="mailto:hola@lagamberra.xyz" class="cursor-pointer rounded-sm hover:underline">Contacto</a>
         </nav>
       </div>
     </div>
