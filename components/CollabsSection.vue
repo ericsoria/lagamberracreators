@@ -89,6 +89,16 @@ const toggleMute = (index: number) => {
   video.muted = !video.muted
   muted.value[index] = video.muted
 }
+
+const handleEnded = (index: number) => {
+  const video = videoEls.value[index]
+
+  playing.value[index] = false
+
+  if (video) {
+    video.currentTime = 0
+  }
+}
 </script>
 
 <template>
@@ -97,10 +107,10 @@ const toggleMute = (index: number) => {
       <div class="max-w-3xl">
         <p class="font-soft text-sm font-semibold uppercase tracking-[0.26em] text-muted">Nuestras colaboraciones</p>
         <h2 class="mt-5 font-headline text-4xl font-semibold leading-none tracking-[-0.045em] text-text sm:text-6xl">
-          Contenido que se siente de aquí.
+          Contenido que encaja con cada marca.
         </h2>
         <p class="mt-7 max-w-2xl text-lg leading-8 text-muted">
-          Reels, TikToks, historias y posts listos para mostrar cómo se vive una marca en la calle, en la mesa y en cámara.
+          Reels, TikToks, historias y posts listos para mostrar una marca de forma natural, cercana y pensada para redes.
         </p>
       </div>
 
@@ -120,13 +130,13 @@ const toggleMute = (index: number) => {
               :src="mediaUrl(collab.video, 'videos')"
               :poster="mediaUrl(collab.poster, 'images')"
               muted
-              loop
               playsinline
               preload="none"
               tabindex="0"
               :aria-label="`${collab.label} de ${collab.brand} con ${collab.creator}. Clic para reproducir o pausar.`"
               @play="playing[index] = true"
               @pause="playing[index] = false"
+              @ended="handleEnded(index)"
               @click="togglePlayback(index)"
               @keydown.enter.prevent="togglePlayback(index)"
               @keydown.space.prevent="togglePlayback(index)"
